@@ -20,9 +20,9 @@ public class Patient {
     private String firstname;
     private String surename;
     private int age;
-    private String telNumber;
+    private String contact;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     //@JoinColumn(name = "visit_id")
     private Visit visit;
 }
@@ -32,7 +32,7 @@ public class Patient {
         `firstname` varchar(50) DEFAULT NULL,
         `surename` varchar(60) DEFAULT NULL,
         `age` int(10) DEFAULT NULL,
-        `telNumber` varchar(50) DEFAULT NULL,
+        `contact` varchar(50) DEFAULT NULL,
         `visit_id` bigint(20) DEFAULT NULL,
         PRIMARY KEY (`id`),
         KEY `visit_id` (`visit_id`),

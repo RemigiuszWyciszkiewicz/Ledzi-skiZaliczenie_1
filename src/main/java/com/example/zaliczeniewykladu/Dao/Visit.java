@@ -27,7 +27,7 @@ public class Visit {
     @Column(name = "refunded")
     private boolean refunded;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     //@JoinColumn(name = "doctor_id")
     private Doctor doctor;
 }

@@ -1,6 +1,7 @@
 package com.example.zaliczeniewykladu.Service;
 
 import com.example.zaliczeniewykladu.Dao.Doctor;
+import com.example.zaliczeniewykladu.Dao.Patient;
 import com.example.zaliczeniewykladu.Dao.Specialization;
 import com.example.zaliczeniewykladu.Dao.Visit;
 import com.example.zaliczeniewykladu.Repository.DoctorRepository;
@@ -40,10 +41,19 @@ public class HospitalService {
         doctorRepository.save(doctor_3);
         doctorRepository.save(doctor_4);
 
-        //Przykładowe wizyty
-        String input = "2014-12-09 02:18:38";
-        Visit visit = new Visit(0L,sdfIn.parse(input),"PRzychodznia wyszyńskiego",true,doctor_2);
-        visitRepository.save(visit);
+        Visit visit_1 = new Visit(0L,sdfIn.parse("2014-03-09 20:18:38"),"Szpital w Bydgoszczy",true,doctor_2);
+        Visit visit_2 = new Visit(0L,sdfIn.parse("2018-12-19 12:20:38"),"Przychodznia lekarska Wyszyńskiego",false,doctor_1);
+        Visit visit_3 = new Visit(0L,sdfIn.parse("2022-10-20 18:18:38"),"Wojskowy Szpital w Rzeszowie",true,doctor_4);
+
+        Patient patient_1 = new Patient(0L,"Remigiusz" , "Wyciszkiewicz" , 30, "4124141" , visit_1);
+        Patient patient_2 = new Patient(0L,"Sebastian" , "Kulig" , 11, "4154141" , visit_2);
+        Patient patient_3 = new Patient(0L,"katarzyna" , "Lipinska" , 30, "5426362" , visit_3);
+
+        patientRepository.save(patient_1);
+        patientRepository.save(patient_2);
+        patientRepository.save(patient_3);
+
+
 
 
     }
