@@ -29,9 +29,9 @@ public class HospitalService {
 
     SimpleDateFormat sdfIn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public List<Visit> getAllVisits()
+    public List<Patient> getAllPatientsAndVisits()
     {
-        return this.visitRepository.findAll();
+        return this.patientRepository.findAll();
     }
 
 
