@@ -24,5 +24,5 @@ public class Patient {
 
     @OneToOne
     @JoinColumn(name = "visit_id")
-    private long visit_id;
+    private Visit visit;
 }
