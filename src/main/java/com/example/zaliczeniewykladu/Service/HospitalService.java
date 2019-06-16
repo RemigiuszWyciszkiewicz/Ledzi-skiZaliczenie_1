@@ -18,6 +18,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class HospitalService {
@@ -27,6 +28,12 @@ public class HospitalService {
     @Autowired VisitRepository visitRepository;
 
     SimpleDateFormat sdfIn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+    public List<Visit> getAllVisits()
+    {
+        return this.visitRepository.findAll();
+    }
+
 
     @PostConstruct
     @Transactional
@@ -52,10 +59,6 @@ public class HospitalService {
         patientRepository.save(patient_1);
         patientRepository.save(patient_2);
         patientRepository.save(patient_3);
-
-
-
-
     }
 
 
