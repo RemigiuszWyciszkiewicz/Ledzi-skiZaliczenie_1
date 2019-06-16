@@ -23,5 +23,6 @@ public class Patient {
     private String telNumber;
 
     @OneToOne
+    @JoinColumn(name = "visit_id")
     private long visit_id;
 }

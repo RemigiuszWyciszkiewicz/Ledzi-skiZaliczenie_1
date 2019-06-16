@@ -22,4 +22,8 @@ public class Visit {
     private Date date;
     private String place;
     private boolean isRefunded;
+
+    @ManyToOne
+    @JoinColumn(name = "doctor_id")
+    private long doctor_id;
 }
