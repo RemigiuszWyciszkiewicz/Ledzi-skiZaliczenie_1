@@ -25,5 +25,5 @@ public class Visit {
 
     @ManyToOne
     @JoinColumn(name = "doctor_id")
-    private long doctor_id;
+    private Doctor doctor;
 }
