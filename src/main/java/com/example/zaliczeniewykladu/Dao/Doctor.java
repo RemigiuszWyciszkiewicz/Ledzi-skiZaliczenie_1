@@ -22,19 +22,17 @@ public class Doctor {
     private String firstname;
     private String surename;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Specialization specialization;
 
-
 }
-
 
 /*
     CREATE TABLE `doctor` (
         `id` bigint(20) NOT NULL AUTO_INCREMENT,
         `firstname` varchar(50) DEFAULT NULL,
         `surename` varchar(60) DEFAULT NULL,
-        `specialization` int(10) DEFAULT NULL,
+        `specialization` varchar(50) DEFAULT NULL,
         PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 */

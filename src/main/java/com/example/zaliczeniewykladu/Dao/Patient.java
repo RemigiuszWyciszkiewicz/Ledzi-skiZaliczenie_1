@@ -26,7 +26,6 @@ public class Patient {
     //@JoinColumn(name = "visit_id")
     private Visit visit;
 }
-
 /*
     CREATE TABLE `patient` (
         `id` bigint(20) NOT NULL AUTO_INCREMENT,
