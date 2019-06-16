@@ -9,19 +9,23 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "visit")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "visit")
 public class Visit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
+
     private String place;
-    private boolean isRefunded;
+
+    @Column(name = "refunded")
+    private boolean refunded;
 
     @ManyToOne
     //@JoinColumn(name = "doctor_id")
