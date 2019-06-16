@@ -19,7 +19,7 @@ public class HospitalService {
     @Autowired DoctorRepository doctorRepository;
     @Autowired PatientRepository patientRepository;
     @Autowired VisitRepository visitRepository;
-    
+
     @PostConstruct
     @Transactional
     void initvalues()
