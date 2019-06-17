@@ -8,5 +8,5 @@ public class InputFromUser {
      String imieFryzjera;
      String nazwiskoFryzjera;
      int dzien;
-     
+
 }
