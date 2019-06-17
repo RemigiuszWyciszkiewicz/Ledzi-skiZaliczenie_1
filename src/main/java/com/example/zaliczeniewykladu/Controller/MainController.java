@@ -19,6 +19,7 @@ public class MainController {
     public String getData(Model model)
     {
         model.addAttribute("fryzjerzy",zakladFryzjerskiService.pobierzListeFryzjerow());
+        model.addAttribute("grafik",zakladFryzjerskiService.pobierzGrafik());
         return "firstPage";
     }
 

@@ -1,10 +1,13 @@
 package com.example.zaliczeniewykladu.Dao;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -19,22 +22,17 @@ public class Grafik {
     private long id;
 
     @Enumerated(EnumType.STRING)
-    private Usługi usługi;
+    private Usługi rodzaj_uslugi;
 
-    private Date data;
+    private LocalDateTime data;
+
 
     @ManyToOne
     private Fryzjer fryzjer;
 
 
+
+
 }
 
 
-/*
-create table `grafik` (
-`id` bigint not null auto_increment,
-`data` date,
-`rodzaj_uslugi` varchar(50),
-`fryzjer_id` bigint,
-primary key(`id`) , foreign key(`fryzjer_id`) references `fryzjer` (`id`))
-*/

@@ -34,6 +34,9 @@ public class Fryzjer {
     @OneToMany(mappedBy = "fryzjer")
     List<Grafik> grafikList = new ArrayList<>();
 
-
+    @Override
+    public String toString() {
+        return imie + " " + nazwisko;
+    }
 }
 

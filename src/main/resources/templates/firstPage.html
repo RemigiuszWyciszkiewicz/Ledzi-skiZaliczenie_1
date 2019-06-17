@@ -9,8 +9,11 @@
 </head>
 <body>
 <h1>Zakład Fryzjerski</h1>
+<div class="container">
+<div class="row">
+    <div class="col-5">
 
-<div class="conatiner">
+    <h3>Pracownicy</h3>
     <table border = "1">
         <thead>
         <tr>
@@ -27,7 +30,28 @@
         </tr>
         </tbody>
     </table>
+</div>
+        <div class="col-5">
+    <h3>GRAFIK</h3>
 
+    <table border = "1">
+        <thead>
+        <tr>
+            <td>Data</td>
+            <td>Rodzaj usługi</td>
+            <td>Fryzjer</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="usluga: ${grafik}">
+            <td th:text="${usluga.getData()}">
+            <td th:text="${usluga.getRodzaj_uslugi()}">
+            <td th:text="${usluga.getFryzjer().toString()}">
+        </tr>
+        </tbody>
+    </table>
+        </div>
+</div>
 </div>
 </body>
 </html>
