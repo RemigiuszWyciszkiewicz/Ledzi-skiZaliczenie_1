@@ -36,11 +36,19 @@
     <form action="#" th:action="@{/grafik}"
           th:object="${grafikDlaFryzjera}" method="POST">
 
-        <input type="text" th:field="*{imieFryzjera}" class = "form-control mb-4 col-4" placeholder="imie">
+        <select th:field="${grafikDlaFryzjera.nazwiskoFryzjera}">
+            <option th:each="opcja: ${fryzjerzy}" th:value="${opcja.getNazwisko()}" th:text="${opcja.getNazwisko()}"></option>
+        </select>
+        <select th:field="${grafikDlaFryzjera.imieFryzjera}">
+            <option th:each="opcja: ${fryzjerzy}" th:value="${opcja.getImie()}" th:text="${opcja.getImie()}"></option>
+        </select>
+        <input type="text" th:field="*{dzien}" class = "form-control mb-4 col-4" placeholder="imie">
+
+    <!--    <input type="text" th:field="*{imieFryzjera}" class = "form-control mb-4 col-4" placeholder="imie">
         <input type="text" th:field="*{nazwiskoFryzjera}" class = "form-control mb-4 col-4" placeholder="nazwisko">
         <input type="text" th:field="*{dzien}" class = "form-control mb-4 col-4" placeholder="dzien">
 
-
+-->
         <button type="submit" class="btn btn-info col-2">Save</button>
     </form>
 </div>
