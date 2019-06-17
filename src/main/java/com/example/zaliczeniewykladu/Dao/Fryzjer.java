@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "fryzjer")
@@ -13,6 +15,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Fryzjer {
+
+    public Fryzjer(String imie, String nazwisko, int staz_pracy) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.staz_pracy = staz_pracy;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +30,9 @@ public class Fryzjer {
     private String nazwisko;
 
     private int staz_pracy;
+
+    @OneToMany(mappedBy = "fryzjer")
+    List<Grafik> grafikList = new ArrayList<>();
 
 
 }

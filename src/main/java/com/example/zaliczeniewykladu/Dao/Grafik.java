@@ -23,14 +23,18 @@ public class Grafik {
 
     private Date data;
 
+    @ManyToOne
+    private Fryzjer fryzjer;
+
 
 }
 
 
 /*
-    create table `grafik` (
-        `id` bigint not null auto_increment,
-        `data` date,
-        `rodzaj_uslugi` varchar(50),
-        primary key(`id`))
+create table `grafik` (
+`id` bigint not null auto_increment,
+`data` date,
+`rodzaj_uslugi` varchar(50),
+`fryzjer_id` bigint,
+primary key(`id`) , foreign key(`fryzjer_id`) references `fryzjer` (`id`))
 */

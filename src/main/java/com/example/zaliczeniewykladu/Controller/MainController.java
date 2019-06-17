@@ -12,7 +12,7 @@ public class MainController {
     @GetMapping("/")
     public String getData(Model model)
     {
-
+        return null;
     }
 
 
