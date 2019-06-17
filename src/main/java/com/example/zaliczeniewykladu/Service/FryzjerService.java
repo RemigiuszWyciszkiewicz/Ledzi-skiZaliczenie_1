@@ -8,7 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 @Service
-public class HospitalService {
+public class FryzjerService {
 
 
 
