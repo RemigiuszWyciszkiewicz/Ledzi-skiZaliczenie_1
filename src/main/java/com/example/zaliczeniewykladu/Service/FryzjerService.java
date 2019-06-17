@@ -23,9 +23,9 @@ public class FryzjerService {
     @Transactional
     void initvalues() throws ParseException {
 
-        Fryzjer fryzjer_1 = new Fryzjer(0L,"Adam","Szymanski",2);
-        Fryzjer fryzjer_2 = new Fryzjer(0L,"Karolina","Chajdarowska",20);
-        Fryzjer fryzjer_3 = new Fryzjer(0L,"Aneta","Kruk",8);
+        Fryzjer fryzjer_1 = new Fryzjer("Adam","Szymanski",2);
+        Fryzjer fryzjer_2 = new Fryzjer("Karolina","Chajdarowska",20);
+        Fryzjer fryzjer_3 = new Fryzjer("Aneta","Kruk",8);
 
         fryzjerRepo.save(fryzjer_1);
         fryzjerRepo.save(fryzjer_2);
