@@ -9,15 +9,21 @@ import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 @Service
-public class FryzjerService {
+public class ZakladFryzjerskiService {
 
     @Autowired
     FryzjerRepo fryzjerRepo;
 
     //SimpleDateFormat sdfIn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
+    @Transactional
+    public List<Fryzjer> pobierzListeFryzjerow()
+    {
+        return this.fryzjerRepo.findAll();
+    }
 
     @PostConstruct
     @Transactional

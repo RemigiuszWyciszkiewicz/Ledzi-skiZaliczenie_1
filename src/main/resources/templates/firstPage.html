@@ -8,22 +8,22 @@
     <title>Hospital page</title>
 </head>
 <body>
-<h1>zajebiscie dziala</h1>
+<h1>Zakład Fryzjerski</h1>
 
 <div class="conatiner">
     <table border = "1">
         <thead>
         <tr>
-            <td>Patient`s name</td>
-            <td>Age</td>
-            <td>Visit date</td>
+            <td>Imie</td>
+            <td>Nazwisko</td>
+            <td>Staż pracy</td>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="patient: ${info}">
-            <td th:text="${patient.getFirstname()}">
-            <td th:text="${patient.getAge()}">
-            <td th:text="${patient.getVisit().getDate()}">
+        <tr th:each="fryzjer: ${fryzjerzy}">
+            <td th:text="${fryzjer.getImie()}">
+            <td th:text="${fryzjer.getNazwisko()}">
+            <td th:text="${fryzjer.getStaz_pracy()}">
         </tr>
         </tbody>
     </table>
