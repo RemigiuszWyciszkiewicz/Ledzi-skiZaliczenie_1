@@ -15,9 +15,7 @@ public class HospitalControlaer {
     @GetMapping("/")
     public String getData(Model model)
     {
-        model.addAttribute("info" , hospitalService.getAllPatientsAndVisits());
 
-        return "firstPage";
     }
 
 

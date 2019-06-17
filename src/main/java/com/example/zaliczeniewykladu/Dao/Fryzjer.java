@@ -6,14 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
+@Table(name = "doctor")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "visit")
-public class Visit {
+public class Fryzjer {
+
 
 
 }
+

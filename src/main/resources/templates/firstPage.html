@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital page</title>
+</head>
+<body>
+<h1>zajebiscie dziala</h1>
+
+<div class="conatiner">
+    <table border = "1">
+        <thead>
+        <tr>
+            <td>Patient`s name</td>
+            <td>Age</td>
+            <td>Visit date</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="patient: ${info}">
+            <td th:text="${patient.getFirstname()}">
+            <td th:text="${patient.getAge()}">
+            <td th:text="${patient.getVisit().getDate()}">
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
