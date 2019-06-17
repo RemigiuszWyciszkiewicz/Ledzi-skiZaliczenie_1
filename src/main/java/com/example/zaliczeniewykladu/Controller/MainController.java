@@ -37,7 +37,7 @@ public class MainController {
     @PostMapping("/grafik")
     public String pobierzGrafikDlaOkreslonegoFryzjeraWOkreslonymDniu(Model model,@ModelAttribute("grafikDlaFryzjera") InputFromUser daneOdUsera) {
 
-        System.out.println(daneOdUsera.dzien + daneOdUsera.nazwiskoFryzjera);
+
 
         List<Grafik> grafiks=zakladFryzjerskiService.pobierzGrafik().stream()
                 .filter(grafik -> grafik.getData().getDayOfMonth() == daneOdUsera.getDzien() )

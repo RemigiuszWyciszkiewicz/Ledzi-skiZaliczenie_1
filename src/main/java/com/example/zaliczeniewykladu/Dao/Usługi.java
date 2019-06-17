@@ -2,6 +2,6 @@ package com.example.zaliczeniewykladu.Dao;
 
 public enum Usługi {
 
-    USŁGA_15MINUT,USŁGA_30MINUT,USŁGA_60MINUT
+    MINUT_15,MINUT_30,MINUT_60
 
 }
