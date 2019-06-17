@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>GRAFIK</h3>
+
+<table border = "1">
+    <thead>
+    <tr>
+        <td>Data</td>
+        <td>Usluga</td>
+        <td>Fryzjer</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="uslugaa: ${grafikDlaFryzjera}">
+        <td th:text="${uslugaa.getData()}">
+        <td th:text="${uslugaa.getRodzaj_uslugi()}">
+        <td th:text="${uslugaa.getFryzjer().toString()}">
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
