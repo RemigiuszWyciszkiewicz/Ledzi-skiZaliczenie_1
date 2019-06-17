@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
@@ -31,27 +32,20 @@
         </tbody>
     </table>
 </div>
-        <div class="col-5">
-    <h3>GRAFIK</h3>
+<div class="col-5">
+    <form action="#" th:action="@{/grafik}"
+          th:object="${grafikDlaFryzjera}" method="POST">
 
-    <table border = "1">
-        <thead>
-        <tr>
-            <td>Data</td>
-            <td>Rodzaj usługi</td>
-            <td>Fryzjer</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="usluga: ${grafik}">
-            <td th:text="${usluga.getData()}">
-            <td th:text="${usluga.getRodzaj_uslugi()}">
-            <td th:text="${usluga.getFryzjer().toString()}">
-        </tr>
-        </tbody>
-    </table>
-        </div>
+        <input type="text" th:field="*{imieFryzjera}" class = "form-control mb-4 col-4" placeholder="imie">
+        <input type="text" th:field="*{nazwiskoFryzjera}" class = "form-control mb-4 col-4" placeholder="nazwisko">
+        <input type="text" th:field="*{dzien}" class = "form-control mb-4 col-4" placeholder="dzien">
+
+
+        <button type="submit" class="btn btn-info col-2">Save</button>
+    </form>
 </div>
 </div>
+</div>
+
 </body>
 </html>
